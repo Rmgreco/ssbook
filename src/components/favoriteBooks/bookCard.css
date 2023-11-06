@@ -1,0 +1,37 @@
+.book-card {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 20px;
+}
+
+.book-card img {
+    width: 136px;
+    height: 198px;
+    border-radius: 8px;
+}
+
+.book-card h3 {
+    margin: 10px 0px;
+    width: 136px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px;
+    text-align: left;
+
+}
+
+.book-card p {
+    margin: 0;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0px;
+    text-align: left;
+    color: #757575;
+
+}

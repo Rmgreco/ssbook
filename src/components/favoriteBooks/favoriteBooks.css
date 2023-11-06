@@ -1,0 +1,33 @@
+.favorite-books-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.see-more-container {
+    display: flex;
+    padding: 0px 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.see-more {
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    letter-spacing: 0px;
+    text-align: center;
+    color: #A076F2;
+    cursor: pointer;
+}
+
+.fav-title {
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 23px;
+    letter-spacing: 0px;
+    text-align: left;
+    color: #555555;
+
+}

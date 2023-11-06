@@ -1,0 +1,29 @@
+import { gql } from "@apollo/client";
+
+export const ALL_BOOKS_QUERY = gql`
+  query AllBooks {
+    allBooks {
+      name
+    }
+  }
+`;
+
+export const FAVORITES_BOOKS_QUERY = gql`
+  query favoriteBooks {
+    favoriteBooks {
+      name
+      cover
+      author {
+        name
+      }
+    }
+  }
+`;
+
+export const BOOK_DETAIL_QUERY = gql`
+  query BookDetail($id: ID!) {
+    book(id: $id) {
+      name
+    }
+  }
+`;
