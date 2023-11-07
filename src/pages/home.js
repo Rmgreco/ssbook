@@ -4,6 +4,7 @@ import { ALL_BOOKS_QUERY } from "../queries/queries";
 import { useQuery } from "@apollo/client";
 import Header from "../components/header/header";
 import FavoriteBooks from "../components/favoriteBooks/favoriteBooks";
+import FavoriteAuthors from "../components/favoriteAuthors/favoriteAuthors";
 
 function Home() {
   const { loading, error, data } = useQuery(ALL_BOOKS_QUERY);
@@ -11,13 +12,13 @@ function Home() {
   if (loading) return "Carregando...";
   if (error) return `Erro! ${error.message}`;
 
-  const books = data.allBooks;
+  // const books = data.allBooks;
 
-  console.log(books, "data");
   return (
     <>
       <Header />
       <FavoriteBooks />
+      <FavoriteAuthors />
       {/* <h1>Sua Biblioteca de Livros</h1>
       <ul>
         {books.map((book) => (

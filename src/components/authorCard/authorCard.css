@@ -1,0 +1,31 @@
+.author-card img {
+    width: 67px;
+    border-radius: 8px;
+
+}
+
+.info-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.author-card .author-title {
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 700;
+    color: #555555;
+    margin: 15px 29px 5px 20px;
+}
+
+.author-card .book-count {
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0px;
+    text-align: left;
+    color: #757575;
+    margin: 5px 29px 20px 20px;
+
+
+}

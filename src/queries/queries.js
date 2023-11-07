@@ -20,6 +20,16 @@ export const FAVORITES_BOOKS_QUERY = gql`
   }
 `;
 
+export const FAVORITES_AUTHORS_QUERY = gql`
+  query favoriteAuthors {
+    favoriteAuthors {
+      name
+      picture
+      booksCount
+    }
+  }
+`;
+
 export const BOOK_DETAIL_QUERY = gql`
   query BookDetail($id: ID!) {
     book(id: $id) {

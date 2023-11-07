@@ -3,9 +3,9 @@ import React, { useState } from "react";
 import { useQuery } from "@apollo/client";
 import { FAVORITES_BOOKS_QUERY } from "../../queries/queries";
 import "./favoriteBooks.css";
-import BookCard from "./bookCard";
 
 import styled from "styled-components";
+import BookCard from "../bookCard/bookCard";
 
 const StyleContainer = styled.div`
   display: flex;
@@ -28,7 +28,6 @@ function FavoriteBooks() {
   if (error) return `Erro! ${error.message}`;
 
   const books = data.favoriteBooks;
-  console.log(books);
 
   return (
     <div className="favorite-books-container">
