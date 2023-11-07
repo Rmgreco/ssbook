@@ -1,25 +1,19 @@
+import "./favoriteBooks.css";
 import React, { useState } from "react";
 
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import { useQuery } from "@apollo/client";
 import { FAVORITES_BOOKS_QUERY } from "../../queries/queries";
-import "./favoriteBooks.css";
 
-import styled from "styled-components";
 import BookCard from "../bookCard/bookCard";
-
-const StyleContainer = styled.div`
-  display: flex;
-  overflow: hidden;
-  flex-wrap: ${(props) => (props.seeMore ? "wrap" : "nowrap")};
-`;
-
-StyleContainer.shouldForwardProp = (prop) => prop !== "seeMore";
 
 function FavoriteBooks() {
   const [isSeeMoreTrue, setIsSeeMoreTrue] = useState(false);
 
   const handleClick = () => {
-    setIsSeeMoreTrue(!isSeeMoreTrue); // Alterna o estado entre true e false
+    setIsSeeMoreTrue(!isSeeMoreTrue);
   };
 
   const { loading, error, data } = useQuery(FAVORITES_BOOKS_QUERY);
@@ -28,7 +22,31 @@ function FavoriteBooks() {
   if (error) return `Erro! ${error.message}`;
 
   const books = data.favoriteBooks;
-
+  const settings = {
+    arrows: false,
+    dots: false,
+    infinite: false,
+    speed: 100,
+    slidesToShow: 6,
+    slidesToScroll: 6,
+    initialSlide: 0,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+        },
+      },
+    ],
+  };
   return (
     <div className="favorite-books-container">
       <div className="see-more-container">
@@ -37,11 +55,14 @@ function FavoriteBooks() {
           ver {isSeeMoreTrue ? "menos" : "todos"}
         </span>
       </div>
-      <StyleContainer seeMore={isSeeMoreTrue}>
+
+      <Slider {...settings}>
         {books.map((book, index) => (
-          <BookCard key={index} book={book} />
+          <div key={index}>
+            <BookCard book={book} />
+          </div>
         ))}
-      </StyleContainer>
+      </Slider>
     </div>
   );
 }

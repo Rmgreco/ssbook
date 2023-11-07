@@ -3,6 +3,7 @@
     flex-direction: column;
     background-color: #FFFFFF;
     border-radius: 32px 0px 0px 0px;
+    margin-bottom: 55px;
 
     @media (min-width: 800px) {
         margin-left: 172px;
@@ -37,4 +38,49 @@
     text-align: center;
     color: #A076F2;
     cursor: pointer;
+}
+
+.library-container {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 20px;
+}
+
+.library-selector {
+    display: flex;
+}
+
+
+.selected-button {
+    background-color: #A076F2;
+    color: white;
+    cursor: pointer;
+    border: 2px solid #A076F2;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 24px;
+
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0px;
+    text-align: left;
+}
+
+
+.button {
+    color: #757575;
+    cursor: pointer;
+    border: 2px solid #e5e5e5;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 24px;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0px;
+    text-align: left;
+
 }

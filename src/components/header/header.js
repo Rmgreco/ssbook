@@ -3,7 +3,11 @@ import React, { useState } from "react";
 import avatar from "../../avatar.png";
 import "./header.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPlus, faHeart } from "@fortawesome/free-solid-svg-icons";
+import {
+  faPlus,
+  faHeart,
+  faPlusCircle,
+} from "@fortawesome/free-solid-svg-icons";
 import SearchBar from "../searchBar/searchBar";
 
 function Header() {
@@ -22,7 +26,7 @@ function Header() {
         <div className="desktop-options">
           <SearchBar />
           <button className="add-button">
-            <FontAwesomeIcon icon={faPlus} />
+            <FontAwesomeIcon icon={faPlusCircle} />
             <span className="button-text">Adicionar</span>
           </button>
           <button className="favorites-button">

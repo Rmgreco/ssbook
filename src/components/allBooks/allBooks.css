@@ -1,0 +1,69 @@
+.lib-book {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.book-item-link {
+    text-decoration: none;
+    margin-bottom: 5px;
+    height: 100px;
+    width: 100%;
+    padding: 10px 0px;
+
+    @media (min-width: 800px) {
+        width: 50%;
+
+    }
+
+    @media (min-width: 1024px) {
+        width: 33%;
+
+    }
+}
+
+.book-item {
+    display: flex;
+    margin: 10px 10px;
+    width: 100%;
+}
+
+.book-item img {
+    width: 48px;
+    height: 70px;
+    border-radius: 8px;
+
+    @media (min-width: 800px) {
+        width: 68px;
+        height: 100px;
+
+    }
+}
+
+.book-item .all-book-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0px 20px;
+
+}
+
+.book-item .all-book-title {
+    margin: 0;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px;
+    letter-spacing: 0px;
+    color: #555555;
+}
+
+.book-item .all-book-author {
+    margin: 10px 0px;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0px;
+    color: #757575;
+
+}

@@ -5,6 +5,7 @@ import { FAVORITES_AUTHORS_QUERY } from "../../queries/queries";
 import "./favoriteAuthors.css";
 import styled from "styled-components";
 import AuthorCard from "../authorCard/authorCard";
+import AllBooks from "../allBooks/allBooks";
 
 const StyleAuthorContainer = styled.div`
   display: flex;
@@ -20,9 +21,14 @@ StyleAuthorContainer.shouldForwardProp = (prop) => prop !== "seeMore";
 
 function FavoriteAuthors() {
   const [isSeeMoreTrue, setIsSeeMoreTrue] = useState(false);
+  const [selectedButton, setSelectedButton] = useState("todos");
 
   const handleClick = () => {
     setIsSeeMoreTrue(!isSeeMoreTrue); // Alterna o estado entre true e false
+  };
+
+  const handleButtonClick = (button) => {
+    setSelectedButton(button);
   };
 
   const { loading, error, data } = useQuery(FAVORITES_AUTHORS_QUERY);
@@ -31,7 +37,6 @@ function FavoriteAuthors() {
   if (error) return `Erro! ${error.message}`;
 
   const authors = data.favoriteAuthors;
-  console.log(data);
 
   return (
     <div className="favorite-authors-container">
@@ -46,6 +51,42 @@ function FavoriteAuthors() {
           <AuthorCard key={index} author={author} />
         ))}
       </StyleAuthorContainer>
+      <div className="library-container">
+        <h2 className="fav-author-title">Biblioteca</h2>
+        <div className="library-selector">
+          <div
+            onClick={() => handleButtonClick("todos")}
+            className={
+              selectedButton === "todos" ? "selected-button" : "button"
+            }
+          >
+            Todos
+          </div>
+          <div
+            onClick={() => handleButtonClick("ação")}
+            className={selectedButton === "ação" ? "selected-button" : "button"}
+          >
+            Romance
+          </div>
+          <div
+            onClick={() => handleButtonClick("romance")}
+            className={
+              selectedButton === "romance" ? "selected-button" : "button"
+            }
+          >
+            Aventura
+          </div>
+          <div
+            onClick={() => handleButtonClick("romance")}
+            className={
+              selectedButton === "romance" ? "selected-button" : "button"
+            }
+          >
+            Comédia
+          </div>
+        </div>
+        <AllBooks />
+      </div>
     </div>
   );
 }

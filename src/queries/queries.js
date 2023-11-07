@@ -4,6 +4,11 @@ export const ALL_BOOKS_QUERY = gql`
   query AllBooks {
     allBooks {
       name
+      id
+      cover
+      author {
+        name
+      }
     }
   }
 `;
@@ -12,6 +17,7 @@ export const FAVORITES_BOOKS_QUERY = gql`
   query favoriteBooks {
     favoriteBooks {
       name
+      id
       cover
       author {
         name

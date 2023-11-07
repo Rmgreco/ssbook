@@ -14,8 +14,7 @@ function BookDetail() {
   if (loading) return <p>Carregando...</p>;
   if (error) return <p>Erro: {error.message}</p>;
 
-  const book = data.book;
-  console.log(book.name, "livro");
+  // const book = data.book;
 
   return (
     <div>
