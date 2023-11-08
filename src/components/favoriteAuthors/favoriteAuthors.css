@@ -4,9 +4,11 @@
     background-color: #FFFFFF;
     border-radius: 32px 0px 0px 0px;
     margin-bottom: 55px;
+    overflow: hidden;
 
     @media (min-width: 800px) {
         margin-left: 172px;
+        margin-bottom: 0px;
 
     }
 }

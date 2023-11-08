@@ -4,7 +4,6 @@ import avatar from "../../avatar.png";
 import "./header.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faPlus,
   faHeart,
   faPlusCircle,
 } from "@fortawesome/free-solid-svg-icons";

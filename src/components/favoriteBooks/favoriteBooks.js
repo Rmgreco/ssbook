@@ -55,14 +55,21 @@ function FavoriteBooks() {
           ver {isSeeMoreTrue ? "menos" : "todos"}
         </span>
       </div>
+      {isSeeMoreTrue ?
+        <div className="ver-mais-ativo">
+          {books.map((book, index) => (
+            <div key={index}>
+              <BookCard book={book} />
+            </div>
+          ))}
+        </div> : <Slider {...settings}>
+          {books.map((book, index) => (
+            <div key={index}>
+              <BookCard book={book} />
+            </div>
+          ))}
+        </Slider>}
 
-      <Slider {...settings}>
-        {books.map((book, index) => (
-          <div key={index}>
-            <BookCard book={book} />
-          </div>
-        ))}
-      </Slider>
     </div>
   );
 }

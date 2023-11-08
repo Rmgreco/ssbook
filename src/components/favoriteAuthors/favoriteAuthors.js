@@ -77,9 +77,9 @@ function FavoriteAuthors() {
             Aventura
           </div>
           <div
-            onClick={() => handleButtonClick("romance")}
+            onClick={() => handleButtonClick("comedia")}
             className={
-              selectedButton === "romance" ? "selected-button" : "button"
+              selectedButton === "comedia" ? "selected-button" : "button"
             }
           >
             Comédia

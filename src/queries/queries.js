@@ -40,6 +40,9 @@ export const BOOK_DETAIL_QUERY = gql`
   query BookDetail($id: ID!) {
     book(id: $id) {
       name
+			description
+      cover
+      author{name}
     }
   }
 `;

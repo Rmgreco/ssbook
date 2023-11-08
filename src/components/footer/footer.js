@@ -6,12 +6,12 @@ import {
   faHome,
   faHeart,
   faSearch,
-  faPlus,
   faPlusCircle,
 } from "@fortawesome/free-solid-svg-icons";
+import logo from "../../logo.png"
 
 function Footer() {
-  const isMobile = useMediaQuery({ query: "(max-width: 767px)" });
+  const isMobile = useMediaQuery({ query: "(max-width: 600px)" });
 
   return (
     <div className={`footer${isMobile ? " mobile" : " desktop"}`}>
@@ -35,7 +35,11 @@ function Footer() {
           </div>
         </div>
       ) : (
-        <p>Texto para desktop</p>
+        <div className="footer-desktop">
+          <img src={logo} height={23} alt="logo"></img>
+          <p>Todos os direitos reservados.<br />
+            Studio Sol Books © 2023 </p>
+        </div>
       )}
     </div>
   );

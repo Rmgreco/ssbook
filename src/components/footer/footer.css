@@ -1,5 +1,4 @@
 .footer {
-
     width: 100%;
     background-color: #ffffff;
     color: white;
@@ -35,9 +34,15 @@
 
 
 .desktop {
-    background-color: blue;
+    background-color: #A076F2;
     color: white;
     text-align: center;
-    padding: 10px;
-    font-size: 18px;
+
+}
+
+.footer-desktop{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 20px;
+    align-items: center;
 }
