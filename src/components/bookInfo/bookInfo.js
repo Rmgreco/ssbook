@@ -8,7 +8,7 @@ import { faDownload, faHeart, faShareAlt } from "@fortawesome/free-solid-svg-ico
 
 
 function BookDetails({ book }) {
-  const isMobile = useMediaQuery({ query: "(max-width: 600px)" });
+  const isMobile = useMediaQuery({ query: "(max-width: 700px)" });
 
   const paragraphs = book.description.split("\n\n");
   return (

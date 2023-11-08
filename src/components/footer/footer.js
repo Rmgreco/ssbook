@@ -11,7 +11,7 @@ import {
 import logo from "../../logo.png"
 
 function Footer() {
-  const isMobile = useMediaQuery({ query: "(max-width: 600px)" });
+  const isMobile = useMediaQuery({ query: "(max-width: 700px)" });
 
   return (
     <div className={`footer${isMobile ? " mobile" : " desktop"}`}>
